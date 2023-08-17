@@ -16,7 +16,7 @@
         <converters:PublicationDateConverter x:Key="publicationDate2StringConverter"></converters:PublicationDateConverter>
     </UserControl.Resources>
     <Grid>
-        <StackPanel HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" Margin="50">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type TextBox}">
                     <Setter Property="Margin" Value="0,10,0,0"/>

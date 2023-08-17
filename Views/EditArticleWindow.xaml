@@ -1,0 +1,68 @@
+﻿<Window x:Class="ScientificArticleManagerWPF.Views.EditArticleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScientificArticleManagerWPF.Views"
+        xmlns:converters="clr-namespace:ScientificArticleManagerWPF.Converters"
+        xmlns:viewModels="clr-namespace:ScientificArticleManagerWPF.ViewModel"
+        mc:Ignorable="d"
+        Title="EditArticleWindow" Height="600" Width="800">
+    <Window.DataContext>
+        <viewModels:ArticleViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="0, 15, 0, 3"/>
+        </Style>
+        <converters:PublicationDateEditConverter x:Key="publicationDateEditConverter"></converters:PublicationDateEditConverter>
+    </Window.Resources>
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Margin="20" CanVerticallyScroll="True">
+            <TextBlock Text="Title:" />
+            <TextBox Text="{Binding Path=SelectedArticle.Title}"  HorizontalAlignment="Left" />
+            <TextBlock Text="Abstract:" />
+            <TextBox Text="{Binding Path=SelectedArticle.Abstract}" MinLines="4" />
+            <TextBlock Text="Authors:" />
+            <ItemsControl ItemsSource="{Binding SelectedArticle.Authors}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Margin="5" Background="AliceBlue">
+                                <StackPanel.Resources>
+                                    <Style TargetType="TextBox">
+                                        <Setter Property="Margin" Value="2"/>
+                                        <Setter Property="BorderThickness" Value="1"/>
+                                    </Style>
+                                </StackPanel.Resources>
+                                <TextBox Text="{Binding Path=FirstName}" />
+                                <TextBox Text="{Binding Path=LastName}" />
+                                <TextBox Text="{Binding Path=AcademicDegree}" />
+                                <TextBox Text="{Binding Path=Affiliation}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Text="PublicationDate:" />
+            <TextBox Text="{Binding Path=SelectedArticle.PublicationDate, Converter={StaticResource publicationDateEditConverter}}" />
+            <TextBlock Text="Keywords:" />
+            <ItemsControl ItemsSource="{Binding SelectedArticle.Keywords}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBox Text="{Binding Path=., Mode=TwoWay}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Text="Citation:" />
+            <TextBox Text="{Binding Path=SelectedArticle.Citation}" />
+            <TextBlock Text="DOI:" />
+            <TextBox Text="{Binding Path=SelectedArticle.Doi}" />
+        </StackPanel>
+    </Grid>
+</Window>
