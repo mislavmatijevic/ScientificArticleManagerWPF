@@ -12,16 +12,32 @@
         <viewModels:ArticleViewModel/>
     </UserControl.DataContext>
     <UserControl.Resources>
-        <converters:AuthorNameConverter x:Key="valueconverter"></converters:AuthorNameConverter>
+        <converters:AuthorNameConverter x:Key="authorList2StringConverter"></converters:AuthorNameConverter>
+        <converters:PublicationDateConverter x:Key="publicationDate2StringConverter"></converters:PublicationDateConverter>
     </UserControl.Resources>
     <Grid>
-        <StackPanel HorizontalAlignment="Left">
+        <StackPanel HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,10,0,0"/>
+                </Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="60,10,60,10"/>
+                </Style>
+            </StackPanel.Resources>
             <ItemsControl ItemsSource="{Binding Path=Articles}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Path=Title, Mode=OneTime}"/>
-                            <TextBox Text="{Binding Authors, Converter={StaticResource valueconverter}, Mode=OneTime}"/>
+                        <StackPanel Orientation="Vertical" >
+                            <GroupBox>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Path=Title, Mode=OneTime}" FontSize="16"/>
+                                    <TextBlock Text="{Binding Authors, Converter={StaticResource authorList2StringConverter}, Mode=OneTime}"
+                                        FontStyle="Italic" FontSize="14"/>
+                                    <TextBlock Text="{Binding PublicationDate, Converter={StaticResource publicationDate2StringConverter}}" HorizontalAlignment="Right" />
+                                    <Button Content="Edit"/>
+                                </StackPanel>
+                            </GroupBox>
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
