@@ -5,7 +5,7 @@ namespace ScientificArticleManagerWPF.Model
 {
     internal class ScientificArticle
     {
-        public ScientificArticle(string title, List<ScientificArticleAuthor> authors, string articleAbstract, DateTime publicationDate, List<string> keywords, string doi, string citation)
+        public ScientificArticle(string title, ScientificArticleAuthorsList authors, string articleAbstract, DateTime publicationDate, List<string> keywords, string doi, string citation)
         {
             Title = title;
             Authors = authors;
@@ -17,7 +17,7 @@ namespace ScientificArticleManagerWPF.Model
         }
 
         public string Title { get; set; }
-        public List<ScientificArticleAuthor> Authors { get; set; }
+        public ScientificArticleAuthorsList Authors { get; set; }
         public string Abstract { get; set; }
         public DateTime PublicationDate { get; set; }
         public List<string> Keywords { get; set; }

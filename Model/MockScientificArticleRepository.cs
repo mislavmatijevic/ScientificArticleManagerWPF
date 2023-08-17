@@ -14,7 +14,10 @@ namespace ScientificArticleManagerWPF.Model
         {
             new ScientificArticle(
                 "Exploring Quantum Computing",
-                new List<ScientificArticleAuthor> { new ScientificArticleAuthor("Alice", "Johnson", "Institute of Physics", "PhD") },
+                new ScientificArticleAuthorsList
+                {
+                    new ScientificArticleAuthor("Alice", "Johnson", "Institute of Physics", "PhD")
+                },
                 "This article delves into the principles of quantum computing...",
                 new DateTime(2023, 1, 15),
                 new List<string> { "quantum computing", "physics" },
@@ -23,7 +26,10 @@ namespace ScientificArticleManagerWPF.Model
             ),
             new ScientificArticle(
                 "Advancements in Artificial Intelligence",
-                new List<ScientificArticleAuthor> { new ScientificArticleAuthor("Robert", "Smith", "AI Research Institute", "PhD") },
+                new ScientificArticleAuthorsList
+                {
+                    new ScientificArticleAuthor("Robert", "Smith", "AI Research Institute", "PhD")
+                },
                 "This paper discusses recent breakthroughs in AI and machine learning...",
                 new DateTime(2023, 2, 20),
                 new List<string> { "artificial intelligence", "machine learning" },
@@ -32,7 +38,7 @@ namespace ScientificArticleManagerWPF.Model
             ),
             new ScientificArticle(
                 "Climate Change and Global Impacts",
-                new List<ScientificArticleAuthor>
+                new ScientificArticleAuthorsList
                 {
                     new ScientificArticleAuthor("Emily", "Davis", "Environmental Institute", "PhD"),
                     new ScientificArticleAuthor("James", "Brown", "Climate Research Center", "MSc")
