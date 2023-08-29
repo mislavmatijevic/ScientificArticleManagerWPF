@@ -8,9 +8,6 @@
         xmlns:viewModels="clr-namespace:ScientificArticleManagerWPF.ViewModel"
         mc:Ignorable="d"
         Title="EditArticleWindow" Height="600" Width="800">
-    <Window.DataContext>
-        <viewModels:ArticleViewModel />
-    </Window.DataContext>
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="0, 15, 0, 3"/>
@@ -20,11 +17,11 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" Margin="20" CanVerticallyScroll="True">
             <TextBlock Text="Title:" />
-            <TextBox Text="{Binding Path=SelectedArticle.Title}"  HorizontalAlignment="Left" />
+            <TextBox Text="{Binding Path=Article.Title}"  HorizontalAlignment="Left" />
             <TextBlock Text="Abstract:" />
-            <TextBox Text="{Binding Path=SelectedArticle.Abstract}" MinLines="4" />
+            <TextBox Text="{Binding Path=Article.Abstract}" MinLines="4" />
             <TextBlock Text="Authors:" />
-            <ItemsControl ItemsSource="{Binding SelectedArticle.Authors}">
+            <ItemsControl ItemsSource="{Binding Article.Authors}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -45,9 +42,9 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             <TextBlock Text="PublicationDate:" />
-            <TextBox Text="{Binding Path=SelectedArticle.PublicationDate, Converter={StaticResource publicationDateEditConverter}}" />
+            <TextBox Text="{Binding Path=Article.PublicationDate, Converter={StaticResource publicationDateEditConverter}}" />
             <TextBlock Text="Keywords:" />
-            <ItemsControl ItemsSource="{Binding SelectedArticle.Keywords}">
+            <ItemsControl ItemsSource="{Binding Article.Keywords}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel Orientation="Horizontal" />
@@ -60,9 +57,9 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             <TextBlock Text="Citation:" />
-            <TextBox Text="{Binding Path=SelectedArticle.Citation}" />
+            <TextBox Text="{Binding Path=Article.Citation}" />
             <TextBlock Text="DOI:" />
-            <TextBox Text="{Binding Path=SelectedArticle.Doi}" />
+            <TextBox Text="{Binding Path=Article.Doi}" />
         </StackPanel>
     </Grid>
 </Window>
