@@ -31,8 +31,8 @@
                         <StackPanel Orientation="Vertical" >
                             <GroupBox>
                                 <StackPanel>
-                                    <TextBlock Text="{Binding Path=Title, Mode=OneTime}" FontSize="16"/>
-                                    <TextBlock Text="{Binding Authors, Converter={StaticResource authorList2StringConverter}, Mode=OneTime}"
+                                    <TextBlock Text="{Binding Path=Title}" FontSize="16"/>
+                                    <TextBlock Text="{Binding Authors, Converter={StaticResource authorList2StringConverter}}"
                                         FontStyle="Italic" FontSize="14"/>
                                     <TextBlock Text="{Binding PublicationDate, Converter={StaticResource publicationDate2StringConverter}}" HorizontalAlignment="Right" />
                                     <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:ArticlesView}}, Path=OpenEditViewCommand}" CommandParameter="{Binding}"/>
