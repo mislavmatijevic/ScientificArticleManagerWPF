@@ -1,5 +1,5 @@
-﻿using ScientificArticleManagerWPF.Model;
-using ScientificArticleManagerWPF.ViewModel;
+﻿using ScientificArticleManagerWPF.Models;
+using ScientificArticleManagerWPF.ViewModels;
 using System.Windows;
 
 namespace ScientificArticleManagerWPF.Views

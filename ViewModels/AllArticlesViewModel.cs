@@ -1,7 +1,7 @@
-﻿using ScientificArticleManagerWPF.Model;
+﻿using ScientificArticleManagerWPF.Models;
 using System.Collections.ObjectModel;
 
-namespace ScientificArticleManagerWPF.ViewModel
+namespace ScientificArticleManagerWPF.ViewModels
 {
     internal class AllArticlesViewModel : ViewModel
     {

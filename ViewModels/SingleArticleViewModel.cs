@@ -1,6 +1,6 @@
-﻿using ScientificArticleManagerWPF.Model;
+﻿using ScientificArticleManagerWPF.Models;
 
-namespace ScientificArticleManagerWPF.ViewModel
+namespace ScientificArticleManagerWPF.ViewModels
 {
     class SingleArticleViewModel : ViewModel
     {

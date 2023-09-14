@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ScientificArticleManagerWPF.Model
+namespace ScientificArticleManagerWPF.Models
 {
     internal class MockScientificArticleRepository
     {

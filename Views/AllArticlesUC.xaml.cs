@@ -1,4 +1,4 @@
-﻿using ScientificArticleManagerWPF.Model;
+﻿using ScientificArticleManagerWPF.Models;
 using ScientificArticleManagerWPF.Views.Commands;
 using System.Windows.Controls;
 using System.Windows.Input;

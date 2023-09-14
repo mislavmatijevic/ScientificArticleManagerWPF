@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Text;
 
-namespace ScientificArticleManagerWPF.Model
+namespace ScientificArticleManagerWPF.Models
 {
     internal class ScientificArticleAuthorsList : Collection<ScientificArticleAuthor>
     {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScientificArticleManagerWPF.Views"
         xmlns:converters="clr-namespace:ScientificArticleManagerWPF.Converters"
-        xmlns:viewModels="clr-namespace:ScientificArticleManagerWPF.ViewModel"
+        xmlns:viewModels="clr-namespace:ScientificArticleManagerWPF.ViewModels"
         mc:Ignorable="d"
         Title="EditArticleWindow" Height="600" Width="800">
     <Window.Resources>

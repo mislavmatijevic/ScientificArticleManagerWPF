@@ -1,4 +1,4 @@
-﻿namespace ScientificArticleManagerWPF.Model
+﻿namespace ScientificArticleManagerWPF.Models
 {
     public class ScientificArticleAuthor
     {

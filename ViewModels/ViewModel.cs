@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ScientificArticleManagerWPF.ViewModel
+namespace ScientificArticleManagerWPF.ViewModels
 {
     class ViewModel : INotifyPropertyChanged
     {
