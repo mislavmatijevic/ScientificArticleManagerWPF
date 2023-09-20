@@ -1,4 +1,5 @@
-﻿using ScientificArticleManagerWPF.Models;
+﻿using ScientificArticleManagerWPF.Helpers;
+using ScientificArticleManagerWPF.Models;
 using System.Collections.ObjectModel;
 
 namespace ScientificArticleManagerWPF.ViewModels

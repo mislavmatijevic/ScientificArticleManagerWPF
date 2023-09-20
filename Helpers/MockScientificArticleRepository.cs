@@ -1,8 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using ScientificArticleManagerWPF.Models;
 
-namespace ScientificArticleManagerWPF.Models
+namespace ScientificArticleManagerWPF.Helpers
 {
     internal class MockScientificArticleRepository
     {
