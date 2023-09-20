@@ -9,7 +9,7 @@ namespace ScientificArticleManagerWPF.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             DateTime dateTime = (DateTime)value;
-            return dateTime.ToString("MMMM yyyy.", new CultureInfo("en-US"));
+            return dateTime.ToString("MMMM yyyy", new CultureInfo("en-US"));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
