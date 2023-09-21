@@ -41,7 +41,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-            <TextBlock Text="PublicationDate:" />
+            <TextBlock Text="Publication Date:" />
             <TextBox Text="{Binding Path=Article.PublicationDate, Converter={StaticResource publicationDateEditConverter}}" />
             <TextBlock Text="Keywords:" />
             <ItemsControl ItemsSource="{Binding Article.Keywords}">
