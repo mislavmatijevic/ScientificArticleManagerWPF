@@ -13,7 +13,7 @@ namespace ScientificArticleManagerWPF.Views
         public ArticlesView()
         {
             InitializeComponent();
-            OpenEditViewCommand = new ButtonCommand(OnArticleSelectedForEditting, ArticleExists);
+            OpenEditViewCommand = new ButtonCommand(OnArticleSelectedForEditing, ArticleExists);
         }
 
         public ICommand OpenEditViewCommand { get; init; }
