@@ -23,7 +23,7 @@ namespace ScientificArticleManagerWPF.Views
             return parameter != null && parameter is ScientificArticle;
         }
 
-        public void OnArticleSelectedForEditting(object parameter)
+        public void OnArticleSelectedForEditing(object parameter)
         {
             if (parameter is ScientificArticle selectedArticleForEditting)
             {
